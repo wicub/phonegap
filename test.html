@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Understanding the jQuery Mobile API</title>
+  <script type="text/javacript" src="jquery.js"></script>
+  <script type="text/javascript">
+    $(document).bind("mobileinit", function() {
+      $.mobile.autoInitializePage = false;
+    });
+  </script>
+  <script type="text/java script" src="jquery.mobile.js"></script>
+</head>        
+<body>
+  <div data-role="page">
+    <div data-role="content">
+      <ul data-role="listview" id="my-list"></ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $('#my-list').html('<li><a href="page-2.html">Link to another page</a></li>');
+    $.mobile.autoInitializePage = true;
+  </script>
+</body>
+</html>
